@@ -12,19 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-@RequestMapping("mars/pictures/largest")
 public class ImageStealerController {
 
     @Autowired
     private ImageStealerService imageStealerService;
 
-    @PostMapping("/sol/{sol}")
-    public String arrangeAsyncSearch(@PathVariable int sol) {
-        return imageStealerService.findLargestMarsImageAsync(sol);
+    public String arrangeAsyncSearch(int sol) {
+        throw new RuntimeException("Not Implemented");
     }
 
-    @GetMapping(value = "/command/{commandUuid}", produces = MediaType.IMAGE_JPEG_VALUE)
-    private byte[] getSearchResult(@PathVariable String commandUuid) throws ExecutionException, InterruptedException {
-        return imageStealerService.getSearchResult(commandUuid);
+    private byte[] getSearchResult(String commandUuid) throws ExecutionException, InterruptedException {
+        throw new RuntimeException("Not Implemented");
     }
 }

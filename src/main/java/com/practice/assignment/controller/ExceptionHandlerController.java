@@ -1,7 +1,7 @@
 package com.practice.assignment.controller;
 
 import com.practice.assignment.exception.CommandNotFoundException;
-import com.practice.assignment.exception.CommandProcessingException;
+import com.practice.assignment.exception.CommandStillProcessingException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -17,8 +17,8 @@ public class ExceptionHandlerController {
     }
 
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler(CommandProcessingException.class)
-    public ExceptionResponse handleExceptions(CommandProcessingException ex) {
+    @ExceptionHandler(CommandStillProcessingException.class)
+    public ExceptionResponse handleExceptions(CommandStillProcessingException ex) {
         return new ExceptionResponse(ex.getMessage());
     }
 
