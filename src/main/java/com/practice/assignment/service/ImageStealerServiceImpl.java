@@ -34,7 +34,7 @@ public class ImageStealerServiceImpl implements ImageStealerService {
     /**
      * Retrieves the search result for the largest image from the asynchronous search initiated with the provided commandUuid.
      * Should gracefully handle situation when the task is not completed. Use custom exception in this case.
-     * Also, please note that there is redirect when your request image by it`s origin uri, so you should think how to deal with it.
+     * Also, please note that there is redirect when you request image by it`s origin uri, so you should think how to deal with it.
      *
      * @param commandUuid A unique identifier for the asynchronous image search.
      * @return byte[]: The binary data of the largest image found.
