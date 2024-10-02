@@ -17,10 +17,12 @@ public class ImageStealerController {
     @Autowired
     private ImageStealerService imageStealerService;
 
+    //todo: Provide right request mapping
     public String arrangeAsyncSearch(int sol) {
         throw new RuntimeException("Not Implemented");
     }
 
+    //todo: Provide right response mapping and MediaType for byte[].
     private byte[] getSearchResult(String commandUuid) throws ExecutionException, InterruptedException {
         throw new RuntimeException("Not Implemented");
     }
